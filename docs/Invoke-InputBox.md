@@ -1,28 +1,32 @@
 ---
 external help file: PSScriptTools-help.xml
 Module Name: PSScriptTools
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Invoke-InputBox
 
 ## SYNOPSIS
-Launch a graphical input box
+
+Launch a graphical input box.
 
 ## SYNTAX
 
 ### plain (Default)
-```
+
+```yaml
 Invoke-InputBox [-Title <String>] [-Prompt <String>] [-BackgroundColor <String>]
 ```
 
 ### secure
-```
+
+```yaml
 Invoke-InputBox [-Title <String>] [-Prompt <String>] [-AsSecureString] [-BackgroundColor <String>]
 ```
 
 ## DESCRIPTION
+
 Use this command as a graphical replacement for Read-Host. The command will write either a string or a secure string to the pipeline. You can customize the prompt, title and background color.
 
 This command will not work in PowerShell Core.
@@ -30,25 +34,29 @@ This command will not work in PowerShell Core.
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+
+```powershell
 PS C:\> $name = Invoke-Inputbox -prompt "Enter a user name" -title "New User"
 ```
 
 ### EXAMPLE 2
-```
+
+```powershell
 PS C:\> $pass = Invoke-Inputbox -prompt "Enter a new password" -title "New User" -asSecureString -background red
 ```
 
 Get a secure string value from the user. This example also changes the form background to red.
+
 ## PARAMETERS
 
 ### -AsSecureString
+
 Use to mask the entry and return a secure string.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: secure
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -58,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -BackgroundColor
+
 Set the form background color. You can use a value like 'red' or a '#c0c0c0'.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -Prompt
+
 Enter a prompt. No more than 50 characters.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -Title
+
 Enter the title for the input box. No more than 25 characters.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,12 +120,15 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.String
+
 ### System.Security.SecureString
 
-
 ## NOTES
+
 Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/
 
 ## RELATED LINKS
+
 [Read-Host]()
 
+[New-WPFMessageBox]()

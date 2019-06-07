@@ -1,29 +1,32 @@
 ---
 external help file: PSScriptTools-help.xml
 Module Name: PSScriptTools
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-PSLocation
 
 ## SYNOPSIS
-Get common location values
+
+Get common location values.
 
 ## SYNTAX
 
-```
+```yaml
 Get-PSLocation
 ```
 
 ## DESCRIPTION
+
 This command will write an object to the pipeline that displays the values of common file locations. You might find this helpful when scripting cross-platform.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\> get-pslocation | format-list
+
+```powershell
+PS C:\> get-pslocation
 
 Temp       : C:\Users\Jeff\AppData\Local\Temp\
 Home       : C:\Users\Jeff\Documents
@@ -34,13 +37,14 @@ PowerShell : C:\Users\Jeff\Documents\WindowsPowerShell
 Results on a Windows system.
 
 ### EXAMPLE 2
-```
-PS C:\> get-pslocation | format-list
+
+```powershell
+PS C:\> get-pslocation
 
 Temp       : /tmp/
-Home       : /home/jhicks
+Home       : /home/jeff
 Desktop    :
-PowerShell : /home/jhicks/.config/powershell
+PowerShell : /home/jeff/.config/powershell
 ```
 
 Results on a Linux system running PowerShell Core.
@@ -56,7 +60,9 @@ Results on a Linux system running PowerShell Core.
 ### System.Object
 
 ## NOTES
+
 Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/
 
 ## RELATED LINKS
+
 [Get-Location]()
